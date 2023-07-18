@@ -1,0 +1,15 @@
+.selected {
+    background-color: gray;
+    color: white;
+}
+
+.deleted_btn {
+    background-color: red;
+    color: white;
+    font-weight: 400;
+}
+
+.table_footer {
+    display: flex;
+    justify-content: space-between;
+}

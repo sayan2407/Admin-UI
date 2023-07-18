@@ -1,0 +1,10 @@
+.pagination_button {
+    border-radius: 50%;
+    font-size: 0.8rem;
+    margin: 0 0.5rem;
+}
+
+.selected_page {
+    background-color: blue;
+    color: white;
+}

@@ -1,0 +1,6 @@
+
+.searchbar_container input {
+    padding: 0.8rem;
+    border: 1px solid gray;
+    width: 100%;
+}

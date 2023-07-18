@@ -1,0 +1,9 @@
+nav {
+    background: blue;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 10px 5px #888888;
+}
+
+.nav_container {
+    color: white;
+}
