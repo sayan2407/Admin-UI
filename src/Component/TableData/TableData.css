@@ -13,3 +13,35 @@
     display: flex;
     justify-content: space-between;
 }
+
+.action_icons {
+    background-color: white;
+    margin: 0 0.3rem;
+    padding: 0.3rem;
+}
+
+.emp_editing {
+    border: 1px solid black;
+    padding: 0.2rem 0.5rem;
+}
+
+.table_container {
+    overflow-x: auto;
+}
+
+.action_btn {
+    display: flex;
+}
+
+@media screen and ( max-width: 870px ) {
+    .table_footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .table_footer > button {
+        margin-bottom: 1rem;
+    }
+    
+}

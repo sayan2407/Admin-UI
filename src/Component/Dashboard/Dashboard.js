@@ -47,13 +47,28 @@ const Dashboard = () => {
     }
   }
 
-  const handleSetEmployees = (emps) => {
-    setFillteredEmployee(emps);
-  }
+    const handleSetEmployees = (emps) => {
+      setFillteredEmployee(emps);
+      setEmployees(emps);
+    }
+
+    const handleSearch = (keyword) => {
+      if (!keyword) {
+        setFillteredEmployee(employees);
+      } else {
+        const filtered = employees.filter(
+          (emp) =>
+            emp.name.toLowerCase().includes(keyword.toLowerCase()) ||
+            emp.email.toLowerCase().includes(keyword.toLowerCase()) ||
+            emp.role.toLowerCase().includes(keyword.toLowerCase())
+        );
+        setFillteredEmployee(filtered);
+      }
+    }
 
     return (
         <>
-        <Searchbar/>
+        <Searchbar searchEmployees={handleSearch}/>
         <TableData employees={fillteredEmployee} setEmployees={handleSetEmployees}/>
         </>
     )

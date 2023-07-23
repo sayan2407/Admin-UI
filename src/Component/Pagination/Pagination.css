@@ -2,9 +2,20 @@
     border-radius: 50%;
     font-size: 0.8rem;
     margin: 0 0.5rem;
+    padding: 12px;
+
 }
 
 .selected_page {
     background-color: blue;
     color: white;
+}
+
+@media screen and (max-width:500px) {
+    .pagination_button {
+        font-size: 0.5rem;
+        margin: 0 0.3rem;
+        padding: 8px;
+    }
+    
 }

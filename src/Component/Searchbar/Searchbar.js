@@ -3,17 +3,31 @@ import {
     useState
 } from 'react';
 
-const Searchbar = () => {
+const Searchbar = ({searchEmployees}) => {
 
-    const [ searchingText, setSearchingText ] = useState("");
+    const [debounceTime, setDebounceTime] = useState(null);
+
+
+    const debounceSearch = (event, debounceTimeOut) => {
+
+        const keyword = event.target.value;
+    
+        if ( debounceTimeOut ) {
+          clearTimeout(debounceTimeOut);
+        }
+    
+        const timeout = setTimeout( () => {
+            searchEmployees(keyword);
+        }, 500);
+        setDebounceTime(timeout);
+      }
 
     return (
         <section>
             <div className="container searchbar_container">
                 <input 
                 type="text"
-                value={searchingText}
-                onChange={(e)=>setSearchingText(e.target.value)}
+                onChange={(e)=> debounceSearch(e, debounceTime)}
                 placeholder="Search by name, email or role" ></input>
             </div>
         </section>
