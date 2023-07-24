@@ -29,6 +29,7 @@ const Dashboard = () => {
    * API is https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json
    * use axios to get data and save it to users and fillteredUsers
    */
+
   const fetchEmployees = async() => {
     try {
       const response = await axios.get(api);
@@ -47,11 +48,17 @@ const Dashboard = () => {
     }
   }
 
+  /**
+   * Set Employees after filters, delete
+   */
     const handleSetEmployees = (emps) => {
       setFillteredEmployee(emps);
       setEmployees(emps);
     }
 
+    /**
+     * Search Logic Method
+     */
     const handleSearch = (keyword) => {
       if (!keyword) {
         setFillteredEmployee(employees);

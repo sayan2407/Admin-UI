@@ -1,5 +1,4 @@
-// import React from 'react'
-import Navbar from "../Navbar/Navbar";
+
 import "./NotFound.css";
 import { useNavigate } from "react-router-dom";
 

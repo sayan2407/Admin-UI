@@ -4,12 +4,12 @@ import { FiChevronsLeft, FiChevronLeft, FiChevronRight, FiChevronsRight } from '
 
 
 const Pagination = ({ employees, rowsPerPage, setCurrentPage, currentPage }) => {
-    console.log('employees=> ', employees);
+    // console.log('employees=> ', employees);
   const page_count = Math.ceil(employees.length / rowsPerPage);
-  console.log('page_count ', page_count);
+  // console.log('page_count ', page_count);
 
   const changePage = (index) => {
-    console.log('index=> ' , index);
+    // console.log('index=> ' , index);
     setCurrentPage(index+1);
   }
 
